@@ -1,0 +1,30 @@
+{
+  "id": "bc-template-pig",
+  "description": "Installs and configures the baseline pig cluster component (HDFS/Map Reduce)",
+  "attributes": {
+    "pig": {
+      "debug": true,
+	  "admin_ip_eval": "Chef::Recipe::Barclamp::Inventory.get_network_by_type(node, \"admin\").address",
+      "admin_interface_eval": "Chef::Recipe::Barclamp::Inventory.get_network_by_type(node, \"admin\").interface"
+    }
+  },
+  "deployment": {
+    "pig": {
+      "crowbar-revision": 0,
+      "elements": {},
+      "element_order": [
+        [ 
+        ]
+      ],
+      "config": {
+        "environment": "pig-base-config",
+        "mode": "full",
+        "transitions": true,
+        "transition_list": [
+          "installed"
+        ]
+      } 
+    }
+  }
+}
+
