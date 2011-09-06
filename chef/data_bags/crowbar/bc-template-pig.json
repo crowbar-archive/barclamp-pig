@@ -1,6 +1,6 @@
 {
   "id": "bc-template-pig",
-  "description": "Installs and configures the baseline pig cluster component (HDFS/Map Reduce)",
+  "description": "Installs and configures the Hadoop pig cluster component",
   "attributes": {
     "pig": {
       "debug": true,
