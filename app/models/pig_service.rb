@@ -27,6 +27,29 @@ class PigService < ServiceObject
   def create_proposal
     @logger.debug("pig create_proposal: entering")
     base = super
+    
+    # Get the node list.
+    nodes = NodeObject.all
+    nodes.delete_if { |n| n.nil? }
+    
+    # Find all hadoop edge nodes.
+    edge_nodes = nodes.find_all { |n| n.role? "hadoop-edgenode" }
+    edge_fqdns = Array.new
+    edge_nodes.each { |x|
+      next if x.nil?
+      edge_fqdns << x[:fqdn] if !x[:fqdn].nil? && !x[:fqdn].empty? 
+    }
+    
+    # Check for errors or add the proposal elements
+    base["deployment"]["pig"]["elements"] = { } 
+    if !edge_fqdns.nil? && edge_fqdns.length > 0 
+      # @logger.info("GOT EDGE " + edge_fqdns.to_s)
+      base["deployment"]["pig"]["elements"]["pig-interpreter"] = edge_fqdns 
+    else
+      @logger.debug("pig create_proposal: No edge nodes found, proposal bind failed")
+    end
+    
+    # @logger.debug("pig create_proposal: #{base.to_json}")
     @logger.debug("pig create_proposal: exiting")
     base
   end
