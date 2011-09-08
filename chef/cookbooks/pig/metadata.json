@@ -1,5 +1,5 @@
 {
-  "description": "A platform for analyzing large data sets that consists of a high-level language for expressing data algorithms.",
+  "description": "Platform for analyzing large data sets that consists of a high-level language for expressing data algorithms.",
   "recipes": {
     "pig::default": "Installs pig base libraries and configuration.",
   },

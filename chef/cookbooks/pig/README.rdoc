@@ -1,6 +1,6 @@
 = DESCRIPTION:
 
-A platform for analyzing large data sets that consists of a high-level language
+Platform for analyzing large data sets that consists of a high-level language
 for expressing data algorithms.
 
 = REQUIREMENTS:
