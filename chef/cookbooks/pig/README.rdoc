@@ -1,6 +1,7 @@
 = DESCRIPTION:
 
-Installs and configures the baseline pig cluster component.
+A platform for analyzing large data sets that consists of a high-level language
+for expressing data algorithms.
 
 = REQUIREMENTS:
 

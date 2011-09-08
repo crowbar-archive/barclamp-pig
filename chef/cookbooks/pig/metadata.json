@@ -1,5 +1,5 @@
 {
-  "description": "A high-level data-flow language and execution framework for parallel computation",
+  "description": "A platform for analyzing large data sets that consists of a high-level language for expressing data algorithms.",
   "recipes": {
     "pig::default": "Installs pig base libraries and configuration.",
   },
