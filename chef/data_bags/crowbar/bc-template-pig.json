@@ -14,7 +14,8 @@
       "elements": {},
       "element_order": [
         [ 
-        ]
+          "pig-interpreter"
+		]
       ],
       "config": {
         "environment": "pig-base-config",
