@@ -5,4 +5,72 @@
   = link_to "Raw", proposal_barclamp_path(:id => @proposal.name, :controller => @proposal.barclamp, :dep_raw => @dep_raw, :attr_raw => true), :style => "float: right;"
   %div.container
 
-  
+    %p
+      %label{ :for => :log4jconf }= t('.log4jconf')
+      %input#log4jconf{:type => "text", :name => "log4jconf", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["log4jconf"], :onchange => "update_value('log4jconf', 'log4jconf', 'string')"}
+
+    %p
+      %label{ :for => :brief }= t('.brief')
+      = select_tag :brief, options_for_select([["true","true"], ["false", "false"]], @proposal.raw_data['attributes'][@proposal.barclamp]["brief"]), :onchange => "update_value('brief', 'brief', 'string')"
+
+    %p
+      %label{ :for => :cluster }= t('.cluster')
+      %input#cluster{:type => "text", :name => "cluster", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["cluster"], :onchange => "update_value('cluster', 'cluster', 'string')"}
+
+    %p
+      %label{ :for => :debug_level }= t('.debug_level')
+      %input#debug_level{:type => "text", :name => "debug_level", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["debug_level"], :onchange => "update_value('debug_level', 'debug_level', 'string')"}
+
+    %p
+      %label{ :for => :file }= t('.file')
+      %input#file{:type => "text", :name => "file", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["file"], :onchange => "update_value('file', 'file', 'string')"}
+
+    %p
+      %label{ :for => :jar }= t('.jar')
+      %input#jar{:type => "text", :name => "jar", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["jar"], :onchange => "update_value('jar', 'jar', 'string')"}
+
+    %p
+      %label{ :for => :verbose }= t('.verbose')
+      = select_tag :verbose, options_for_select([["true","true"], ["false", "false"]], @proposal.raw_data['attributes'][@proposal.barclamp]["verbose"]), :onchange => "update_value('verbose', 'verbose', 'string')"
+
+    %p
+      %label{ :for => :exectype }= t('.exectype')
+      %input#exectype{:type => "text", :name => "exectype", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["exectype"], :onchange => "update_value('exectype', 'exectype', 'string')"}
+
+    %p
+      %label{ :for => :ssh_gateway }= t('.ssh_gateway')
+      %input#ssh_gateway{:type => "text", :name => "ssh_gateway", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["ssh_gateway"], :onchange => "update_value('ssh_gateway', 'ssh_gateway', 'string')"}
+
+    %p
+      %label{ :for => :hod_expect_root }= t('.hod_expect_root')
+      %input#hod_expect_root{:type => "text", :name => "hod_expect_root", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["hod_expect_root"], :onchange => "update_value('hod_expect_root', 'hod_expect_root', 'string')"}
+
+    %p
+      %label{ :for => :hod_expect_uselatest }= t('.hod_expect_uselatest')
+      %input#hod_expect_uselatest{:type => "text", :name => "hod_expect_uselatest", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["hod_expect_uselatest"], :onchange => "update_value('hod_expect_uselatest', 'hod_expect_uselatest', 'string')"}
+
+    %p
+      %label{ :for => :hod_command }= t('.hod_command')
+      %input#hod_command{:type => "text", :name => "hod_command", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["hod_command"], :onchange => "update_value('hod_command', 'hod_command', 'string')"}
+
+    %p
+      %label{ :for => :hod_config_dir }= t('.hod_config_dir')
+      %input#hod_config_dir{:type => "text", :name => "hod_config_dir", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["hod_config_dir"], :onchange => "update_value('hod_config_dir', 'hod_config_dir', 'string')"}
+
+    %p
+      %label{ :for => :hod_param }= t('.hod_param')
+      %input#hod_param{:type => "text", :name => "hod_param", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["hod_param"], :onchange => "update_value('hod_param', 'hod_param', 'string')"}
+
+    %p
+      %label{ :for => :pig_spill_size_threshold }= t('.pig_spill_size_threshold')
+      %input#pig_spill_size_threshold{:type => "text", :name => "pig_spill_size_threshold", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["pig_spill_size_threshold"], :onchange => "update_value('pig_spill_size_threshold', 'pig_spill_size_threshold', 'string')"}
+
+    %p
+      %label{ :for => :pig_spill_gc_activation_size }= t('.pig_spill_gc_activation_size')
+      %input#pig_spill_gc_activation_size{:type => "text", :name => "pig_spill_gc_activation_size", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["pig_spill_gc_activation_size"], :onchange => "update_value('pig_spill_gc_activation_size', 'pig_spill_gc_activation_size', 'string')"}
+
+    %p
+      %label{ :for => :log_file }= t('.log_file')
+      %input#log_file{:type => "text", :name => "log_file", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["log_file"], :onchange => "update_value('log_file', 'log_file', 'string')"}
+
+      

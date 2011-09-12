@@ -31,6 +31,14 @@ package "hadoop-pig" do
   action :install
 end
 
+# Update the configuration file.
+template "/etc/pig/conf/pig.properties" do
+  owner node[:pig][:process_file_system_owner]
+  group node[:pig][:global_file_system_group]
+  mode "0644"
+  source "pig-properties.erb"
+end
+
 #######################################################################
 # End of recipe transactions
 #######################################################################

@@ -1,0 +1,64 @@
+#
+# Cookbook Name: pig
+# File: pig-properties
+#
+# Copyright (c) 2011 Dell Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+#######################################################################
+# Pig configuration file (/etc/pig/conf/pig-properties).
+# All values can be overwritten by command line arguments.
+# see bin/pig -help
+#######################################################################
+
+# log4jconf log4j configuration file
+# log4jconf=./conf/log4j.properties
+
+# Brief logging (no timestamps)
+<% if node[:pig][:brief].nil? or node[:pig][:brief].empty? -%># <% end -%>brief=<%= node[:pig][:brief] %>
+
+# Clustername, name of the hadoop jobtracker. If no port is defined port 50020 will be used.
+<% if node[:pig][:cluster].nil? or node[:pig][:cluster].empty? -%># <% end -%>cluster=<%= node[:pig][:cluster] %>
+
+# Debug level, INFO is default
+<% if node[:pig][:debug_level].nil? or node[:pig][:debug_level].empty? -%># <% end -%>debug=<%= node[:pig][:debug_level] %>
+
+# File that contains pig script
+<% if node[:pig][:file].nil? or node[:pig][:file].empty? -%># <% end -%>file=<%= node[:pig][:file] %>
+
+# Load jarfile, colon separated
+<% if node[:pig][:jar].nil? or node[:pig][:jar].empty? -%># <% end -%>jar=<%= node[:pig][:jar] %>
+
+# Verbose print all log messages to screen (default to print only INFO and above to screen)
+<% if node[:pig][:verbose].nil? or node[:pig][:verbose].empty? -%># <% end -%>verbose=<%= node[:pig][:verbose] %>
+
+# Exectype local or mapreduce, mapreduce is default
+<% if node[:pig][:exectype].nil? or node[:pig][:exectype].empty? -%># <% end -%>exectype=<%= node[:pig][:exectype] %>
+
+# HOD realted properties
+<% if node[:pig][:ssh_gateway].nil? or node[:pig][:ssh_gateway].empty? -%># <% end -%>ssh.gateway=<%= node[:pig][:ssh_gateway] %>
+<% if node[:pig][:hod_expect_root].nil? or node[:pig][:hod_expect_root].empty? -%># <% end -%>hod.expect.root=<%= node[:pig][:hod_expect_root] %>
+<% if node[:pig][:hod_expect_uselatest].nil? or node[:pig][:hod_expect_uselatest].empty? -%># <% end -%>hod.expect.uselatest=<%= node[:pig][:hod_expect_uselatest] %>
+<% if node[:pig][:hod_command].nil? or node[:pig][:hod_command].empty? -%># <% end -%>hod.command=<%= node[:pig][:hod_command] %>
+<% if node[:pig][:hod_config_dir].nil? or node[:pig][:hod_config_dir].empty? -%># <% end -%>hod.config.dir=<%= node[:pig][:hod_config_dir] %>
+<% if node[:pig][:hod_param].nil? or node[:pig][:hod_param].empty? -%># <% end -%>hod.param=<%= node[:pig][:hod_param] %>
+
+# Do not spill temp files smaller than this size (bytes)
+<% if node[:pig][:pig_spill_size_threshold].nil? or node[:pig][:pig_spill_size_threshold].empty? -%># <% end -%>pig.spill.size.threshold=<%= node[:pig][:pig_spill_size_threshold] %>
+
+# EXPERIMENTAL: Activate garbage collection when spilling a file bigger than this size (bytes)
+# This should help reduce the number of files being spilled.
+<% if node[:pig][:pig_spill_gc_activation_size].nil? or node[:pig][:pig_spill_gc_activation_size].empty? -%># <% end -%>pig.spill.gc.activation.size=<%= node[:pig][:pig_spill_gc_activation_size] %>
+<% if node[:pig][:log_file].nil? or node[:pig][:log_file].empty? -%># <% end -%>log.file=<%= node[:pig][:log_file] %>

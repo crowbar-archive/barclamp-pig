@@ -4,8 +4,23 @@
   "attributes": {
     "pig": {
       "debug": true,
-	  "admin_ip_eval": "Chef::Recipe::Barclamp::Inventory.get_network_by_type(node, \"admin\").address",
-      "admin_interface_eval": "Chef::Recipe::Barclamp::Inventory.get_network_by_type(node, \"admin\").interface"
+      "log4jconf": "./conf/log4j.properties",
+      "brief": "false",
+      "cluster": "",
+      "debug_level": "INFO",
+      "file": "",
+      "jar": "",
+      "verbose": "false",
+      "exectype": "mapreduce",
+      "ssh_gateway": "",
+      "hod_expect_root": "",
+      "hod_expect_uselatest": "",
+      "hod_command": "",
+      "hod_config_dir": "",
+      "hod_param": "",
+      "pig_spill_size_threshold": "5000000",
+      "pig_spill_gc_activation_size": "40000000",
+      "log_file": ""
     }
   },
   "deployment": {

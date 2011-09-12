@@ -13,8 +13,23 @@
           "required": true,
           "mapping": {
             "debug":  { "type": "bool", "required": true},
-            "admin_ip_eval": { "type": "str", "required": true },
-            "admin_interface_eval": { "type": "str", "required": true }
+            "log4jconf": { "type": "str", "required": false},
+            "brief": { "type": "str", "required": false},
+            "cluster": { "type": "str", "required": false},
+            "debug_level": { "type": "str", "required": false},
+            "file": { "type": "str", "required": false},
+            "jar": { "type": "str", "required": false},
+            "verbose": { "type": "str", "required": false},
+            "exectype": { "type": "str", "required": false},
+            "ssh_gateway": { "type": "str", "required": false},
+            "hod_expect_root": { "type": "str", "required": false},
+            "hod_expect_uselatest": { "type": "str", "required": false},
+            "hod_command": { "type": "str", "required": false},
+            "hod_config_dir": { "type": "str", "required": false},
+            "hod_param": { "type": "str", "required": false},
+            "pig_spill_size_threshold": { "type": "str", "required": false},
+            "pig_spill_gc_activation_size": { "type": "str", "required": false},
+            "log_file": { "type": "str", "required": false}            
           } 
         }
       }

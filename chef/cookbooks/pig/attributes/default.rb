@@ -25,3 +25,6 @@ default[:pig][:config] = {}
 default[:pig][:config][:environment] = "pig-config-default"
 default[:pig][:debug] = true
 
+# File system ownership settings.
+default[:pig][:process_file_system_owner] = "root"
+default[:pig][:global_file_system_group] = "hadoop"
