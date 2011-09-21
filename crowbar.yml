@@ -50,3 +50,6 @@ locale_additions:
         edit_deployment: 
           deployment: Deployment
         
+rpms:
+  pkgs:
+    - hadoop-pig
