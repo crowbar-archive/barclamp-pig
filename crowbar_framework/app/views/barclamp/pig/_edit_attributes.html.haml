@@ -6,6 +6,10 @@
   %div.container
 
     %p
+      %label{ :for => :java_home }= t('.java_home')
+      %input#java_home{:type => "text", :name => "java_home", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["java_home"], :onchange => "update_value('java_home', 'java_home', 'string')"}
+
+    %p
       %label{ :for => :log4jconf }= t('.log4jconf')
       %input#log4jconf{:type => "text", :name => "log4jconf", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["log4jconf"], :onchange => "update_value('log4jconf', 'log4jconf', 'string')"}
 

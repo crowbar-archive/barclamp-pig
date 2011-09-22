@@ -1,0 +1,5 @@
+#!/bin/sh
+<% if !node[:pig][:java_home].nil? and !node[:pig][:java_home].empty? -%>
+export JAVA_HOME=<%= @node[:pig][:java_home] %>
+<% end -%>
+exec /usr/lib/pig/bin/pig "$@"

@@ -39,6 +39,14 @@ template "/etc/pig/conf/pig.properties" do
   source "pig-properties.erb"
 end
 
+# Update the pig startup script (Need to include JAVA_HOME).
+template "/usr/bin/pig" do
+  owner "root"
+  group "root"
+  mode "0755"
+  source "pig-startup.erb"
+end
+
 #######################################################################
 # End of recipe transactions
 #######################################################################

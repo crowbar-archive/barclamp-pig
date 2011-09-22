@@ -13,6 +13,7 @@
           "required": true,
           "mapping": {
             "debug":  { "type": "bool", "required": true},
+            "java_home": { "type": "str", "required": true},
             "log4jconf": { "type": "str", "required": false},
             "brief": { "type": "str", "required": false},
             "cluster": { "type": "str", "required": false},

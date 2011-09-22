@@ -21,6 +21,9 @@
 # Site Specific PIG settings (/etc/pig/conf/pig-properties).
 #######################################################################
 
+# Pig needs java home (/usr/bin/pig).
+default[:pig][:java_home] = "/usr/java/jdk1.6.0_26/jre"
+
 # log4jconf log4j configuration file.
 default[:pig][:log4jconf] = "./conf/log4j.properties"
 
@@ -68,11 +71,10 @@ default[:pig][:hod_param] = ""
 # Do not spill temp files smaller than this size (bytes).
 default[:pig][:pig_spill_size_threshold] = "5000000"
 
-# EXPERIMENT: Activate garbage collection when spilling a file bigger than
+# EXPERIMENTAL: Activate garbage collection when spilling a file bigger than
 # this size (bytes). This should help reduce the number of files being
 # spilled.
 default[:pig][:pig_spill_gc_activation_size] = "40000000"
 
 # Log file location.
 default[:pig][:log_file] = ""
-
