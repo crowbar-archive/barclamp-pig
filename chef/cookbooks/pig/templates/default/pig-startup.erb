@@ -1,4 +1,7 @@
 #!/bin/sh
+#######################################################################
+# Generated and maintained by Crowbar for <%= @node[:fqdn] %>
+#######################################################################
 <% if !node[:pig][:java_home].nil? and !node[:pig][:java_home].empty? -%>
 export JAVA_HOME=<%= @node[:pig][:java_home] %>
 <% end -%>
