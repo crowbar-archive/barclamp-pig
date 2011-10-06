@@ -4,7 +4,7 @@
   "attributes": {
     "pig": {
       "debug": true,
-      "java_home": "/usr/java/jdk1.6.0_26/jre",
+      "java_home": "/usr/java/jdk1.6.0_27/jre",
       "log4jconf": "./conf/log4j.properties",
       "brief": "false",
       "cluster": "",
