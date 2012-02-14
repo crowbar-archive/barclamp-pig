@@ -27,6 +27,9 @@
   "deployment": {
     "pig": {
       "crowbar-revision": 0,
+      "element_states": {
+        "pig-interpreter": [ "readying", "ready", "applying" ]
+      },
       "elements": {},
       "element_order": [
         [ 
