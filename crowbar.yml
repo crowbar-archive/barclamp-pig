@@ -17,12 +17,13 @@
 
 barclamp:
   name: pig
-  display: hadoop Pig
+  display: pig
   version: 0
   requires:
     - hadoop
   member:
     - hadoop
+    - clouderamanager
 
 crowbar:
   layout: 1
