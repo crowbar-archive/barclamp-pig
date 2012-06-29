@@ -29,7 +29,7 @@ Chef::Log.info("BEGIN pig:default") if debug
 env_filter = " AND environment:#{node[:pig][:config][:environment]}"
 
 # Install the hadoop base package.
-package "hadoop-pig" do
+package "pig" do
   action :install
 end
 
