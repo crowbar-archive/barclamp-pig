@@ -24,7 +24,7 @@
 #######################################################################
 
 # Pig needs java home (/usr/bin/pig).
-default[:pig][:java_home] = "/usr/java/jdk1.6.0_27/jre"
+default[:pig][:java_home] = "/usr/java/jdk1.6.0_31/jre"
 
 # log4jconf log4j configuration file.
 default[:pig][:log4jconf] = "./conf/log4j.properties"
