@@ -1,0 +1,40 @@
+# Copyright 2011, Dell, Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+en:
+  barclamp:
+    pig:
+      edit_attributes:
+        attributes: Attributes
+        java_home: Java Home
+        log4jconf: Log4j Configuration File
+        brief: Brief Logging Mode
+        cluster: Hadoop Jobtracker Cluster Name
+        debug_level: Debug Level
+        file: Optional PIG Script File
+        jar: Add-on Jar Load Path
+        verbose: Verbose Logging Mode
+        exectype: Execution Type
+        ssh_gateway: SSH Gateway
+        hod_expect_root: HOD Expect Root
+        hod_expect_uselatest: HOD Expect Use Latest
+        hod_command: HOD Command
+        hod_config_dir: HOD Configuration Directory
+        hod_param: HOD Parameter
+        pig_spill_size_threshold: Spill Size Threshold
+        pig_spill_gc_activation_size: Spill GC Activation Size
+        log_file: Log File Location
+      edit_deployment:
+        deployment: Deployment
