@@ -16,11 +16,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# Author: Paul Webster
-#
 
 #######################################################################
-# Begin recipe transactions
+# Begin recipe
 #######################################################################
 debug = node[:pig][:debug]
 Chef::Log.info("BEGIN pig:default") if debug
@@ -41,7 +39,7 @@ template "/etc/pig/conf/pig.properties" do
   source "pig-properties.erb"
 end
 
-# Update the pig startup script (Need to include JAVA_HOME).
+# Update the pig startup script (Need to set JAVA_HOME).
 template "/usr/bin/pig" do
   owner "root"
   group "root"
@@ -50,6 +48,6 @@ template "/usr/bin/pig" do
 end
 
 #######################################################################
-# End of recipe transactions
+# End of recipe
 #######################################################################
 Chef::Log.info("END pig:default") if debug
