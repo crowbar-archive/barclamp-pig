@@ -6,6 +6,18 @@
   %div.container
 
     %p
+    %br
+    %strong= t('.barclamp_settings')
+
+    %p
+      %label{ :for => :debug }= t('.debug')
+      = select_tag :debug, options_for_select([['false', false],['true', true]], @proposal.raw_data['attributes'][@proposal.barclamp]["debug"]), :onchange => "update_value('debug', 'debug', 'boolean')"
+
+    %p
+    %br
+    %strong= t('.pig_settings')
+
+    %p
       %label{ :for => :java_home }= t('.java_home')
       %input#java_home{:type => "text", :name => "java_home", :'data-default' => @proposal.raw_data['attributes'][@proposal.barclamp]["java_home"], :onchange => "update_value('java_home', 'java_home', 'string')"}
 

@@ -3,7 +3,7 @@
   "description": "Platform for analyzing large data sets that consists of a high-level language for expressing data algorithms.",
   "attributes": {
     "pig": {
-      "debug": true,
+      "debug": false,
       "java_home": "/usr/java/jdk1.6.0_31/jre",
       "log4jconf": "./conf/log4j.properties",
       "brief": "false",

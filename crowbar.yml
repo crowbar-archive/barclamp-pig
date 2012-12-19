@@ -36,6 +36,9 @@ locale_additions:
       pig:
         edit_attributes:
           attributes: Attributes
+          barclamp_settings: Barclamp
+          debug: Log Debug Messages
+          pig_settings: Pig
           java_home: Java Home
           log4jconf: Log4j Configuration File
           brief: Brief Logging Mode
