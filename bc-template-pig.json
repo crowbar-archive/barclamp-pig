@@ -24,6 +24,9 @@
       "log_file": ""
     }
   },
+    "roles": {
+        "pig-interpreter": { "jig": "chef" }
+    },
   "deployment": {
     "pig": {
       "crowbar-revision": 0,
