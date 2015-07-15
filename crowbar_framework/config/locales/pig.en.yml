@@ -1,0 +1,28 @@
+en:
+  barclamp:
+    pig:
+      edit_attributes:
+        attributes: Attributes
+        barclamp_settings: Barclamp
+        debug: Log Debug Messages
+        pig_settings: Pig
+        java_home: Java Home
+        log4jconf: Log4j Configuration File
+        brief: Brief Logging Mode
+        cluster: Hadoop Jobtracker Cluster Name
+        debug_level: Debug Level
+        file: Optional PIG Script File
+        jar: Add-on Jar Load Path
+        verbose: Verbose Logging Mode
+        exectype: Execution Type
+        ssh_gateway: SSH Gateway
+        hod_expect_root: HOD Expect Root
+        hod_expect_uselatest: HOD Expect Use Latest
+        hod_command: HOD Command
+        hod_config_dir: HOD Configuration Directory
+        hod_param: HOD Parameter
+        pig_spill_size_threshold: Spill Size Threshold
+        pig_spill_gc_activation_size: Spill GC Activation Size
+        log_file: Log File Location
+      edit_deployment:
+        deployment: Deployment
